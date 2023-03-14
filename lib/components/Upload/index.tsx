@@ -2,12 +2,12 @@ import { defineComponent, ref } from 'vue'
 import type { UploadProps, UploadFile, UploadRawFile } from "element-plus";
 import { ElUpload, ElImageViewer, ElIcon, ElMessage } from "element-plus";
 export default defineComponent({
-  name: "SUpload",
+  name: "IUpload",
   setup(props, { attrs, emit, slots }) {
     const _attrs = attrs as UploadProps;
     const showViewer = ref<boolean>(false);
     const activeIndex = ref<number>(0);
-
+    console.log('_attrs :>> ', _attrs);
     const hideViewer = () => {
       showViewer.value = false;
     };
@@ -15,7 +15,7 @@ export default defineComponent({
     const handlePreview: UploadProps["onPreview"] = (
       uploadFile: UploadFile
     ) => {
-      const index = _attrs["fileList"].findIndex(
+      const index = _attrs["file-list"].findIndex(
         (file: UploadFile) => file.uid === uploadFile.uid
       );
       // Current active Iamge index

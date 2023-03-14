@@ -1,5 +1,4 @@
-# lement-plus-intensifier
-
+# element-plus-intensifier
 
 ## ElementPlus 组件库增强器
 
