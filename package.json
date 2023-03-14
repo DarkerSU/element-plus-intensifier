@@ -1,0 +1,28 @@
+{
+  "name": "element-plus-intensifier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DarkerSU/element-plus-intensifier.git",
+  "author": "darkersu",
+  "license": "MIT",
+  "keywords": [
+    "vue3",
+    "element-plus",
+    "intensifier"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "element-plus": ">=2.2.0",
+    "vue": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "element-plus": "^2.3.0",
+    "path": "^0.12.7",
+    "vite": "^4.1.4",
+    "vue": "^3.2.47"
+  }
+}
