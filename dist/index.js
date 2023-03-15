@@ -1,43 +1,36 @@
-import { defineComponent as v, ref as f, createVNode as a, Fragment as l, mergeProps as x } from "vue";
-import { ElUpload as w, ElImageViewer as I, ElMessage as U } from "element-plus";
-const V = /* @__PURE__ */ v({
-  name: "SUpload",
-  setup(z, {
-    attrs: n,
-    emit: d,
-    slots: e
+import { defineComponent as m, ref as s, createVNode as i, mergeProps as t } from "vue";
+import { ElUpload as x, ElImageViewer as v, ElMessage as w } from "element-plus";
+const z = /* @__PURE__ */ m({
+  name: "IUpload",
+  setup(I, {
+    attrs: e,
+    emit: o,
+    slots: a
   }) {
-    const r = n, p = f(!1), u = f(0), c = () => {
-      p.value = !1;
-    }, t = (i) => {
-      const m = r.fileList.findIndex((g) => g.uid === i.uid);
-      u.value = m, p.value = !0, d("on-preview", i);
-    }, o = (i) => {
-      if (n.maxSize) {
-        if (i.size / 1024 > n.maxSize)
-          return U.warning(`上传文件大小不能超过 ${n.maxSize}KB`), !1;
+    const n = s(!1), p = s(0), u = () => {
+      n.value = !1;
+    }, d = (l) => {
+      const r = e["file-list"] ? e["file-list"].findIndex((c) => c.uid === l.uid) : 0;
+      p.value = r > -1 ? r : 0, n.value = !0, o("on-preview", l);
+    }, f = (l) => {
+      if (e.maxSize) {
+        if (l.size / 1024 > e.maxSize)
+          return w.warning(`上传文件大小不能超过 ${e.maxSize}KB`), !1;
       } else
-        d("before-upload", i);
+        o("before-upload", l);
     };
-    return () => a(l, null, [a(w, x({
-      class: {
-        "avatar-uploader": r.listType == "picture-card"
-      }
-    }, r, {
-      onPreview: t,
-      beforeUpload: o
+    return () => i("span", null, [i(x, t(e, {
+      onPreview: d,
+      beforeUpload: f
     }), {
-      default: () => e == null ? void 0 : e.default,
-      file: (i) => e == null ? void 0 : e.file,
-      tip: () => e == null ? void 0 : e.tip,
-      trigger: () => e == null ? void 0 : e.trigger
-    }), (r.listType == "picture-card" || r.listType == "picture") && p ? a(I, {
-      activeIndex: u,
-      urlList: r.fileList ? r.fileList.map((i) => i.url) : [],
-      onClose: c
-    }, null) : a(l, null, null)]);
+      ...a
+    }), (e["list-type"] === "picture-card" || e["list-type"] === "picture") && n.value ? i(v, {
+      initialIndex: p.value,
+      urlList: e["file-list"] ? e["file-list"].map((l) => l.url) : [],
+      onClose: u
+    }, null) : i("span", null, null)]);
   }
 });
 export {
-  V as IUpload
+  z as IUpload
 };

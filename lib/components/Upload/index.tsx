@@ -1,27 +1,20 @@
-import { defineComponent, ref } from 'vue'
-import type { UploadProps, UploadFile, UploadRawFile } from "element-plus";
-import { ElUpload, ElImageViewer, ElIcon, ElMessage } from "element-plus";
+import { defineComponent, ref, computed, watch } from "vue";
+import { UploadProps, UploadFile, UploadRawFile, FormInstance, ElUpload, ElImageViewer, ElMessage } from "element-plus";
+
 export default defineComponent({
   name: "IUpload",
   setup(props, { attrs, emit, slots }) {
-    const _attrs = attrs as UploadProps;
     const showViewer = ref<boolean>(false);
-    const activeIndex = ref<number>(0);
-    console.log('_attrs :>> ', _attrs);
+    const initialIndex = ref<number>(0);
+
     const hideViewer = () => {
       showViewer.value = false;
     };
 
-    const handlePreview: UploadProps["onPreview"] = (
-      uploadFile: UploadFile
-    ) => {
-      const index = _attrs["file-list"].findIndex(
-        (file: UploadFile) => file.uid === uploadFile.uid
-      );
-      // Current active Iamge index
-      activeIndex.value = index;
-      //Image Preivew Status
-      showViewer.value = true;
+    const handlePreview: UploadProps["onPreview"] = (uploadFile: UploadFile) => {
+      const index = attrs["file-list"] ? attrs["file-list"].findIndex((file: UploadFile) => file.uid === uploadFile.uid) : 0;
+      initialIndex.value = index > -1 ? index : 0;  // Current active Iamge index
+      showViewer.value = true;   //Image Preivew Status
       emit("on-preview", uploadFile);
     };
 
@@ -36,39 +29,26 @@ export default defineComponent({
         emit("before-upload", rawFile);
       }
     };
-    return () => {
-      return (
-        <>
-          <ElUpload
-            class={{ "avatar-uploader": _attrs["listType"] == "picture-card" }}
-            {..._attrs}
-            onPreview={handlePreview}
-            beforeUpload={beforeUpload}
-            v-slots={{
-              default: () => slots?.default,
-              file: (file: UploadFile) => slots?.file,
-              tip: () => slots?.tip,
-              trigger: () => slots?.trigger,
-            }}
-          ></ElUpload>
+    return () => (
+      <span>
+        <ElUpload {...attrs}
+          onPreview={handlePreview}
+          beforeUpload={beforeUpload}
+          v-slots={{
+            ...slots,
+          }}
+        ></ElUpload>
 
-          {(_attrs["listType"] == "picture-card" ||
-            _attrs["listType"] == "picture") &&
-            showViewer ? (
-            <ElImageViewer
-              activeIndex={activeIndex}
-              urlList={
-                _attrs["fileList"]
-                  ? _attrs["fileList"].map((file: UploadFile) => file.url)
-                  : []
-              }
-              onClose={hideViewer}
-            ></ElImageViewer>
-          ) : (
-            <></>
-          )}
-        </>
-      );
-    };
+        {(attrs["list-type"] === "picture-card" || attrs["list-type"] === "picture") && showViewer.value ? (
+          <ElImageViewer
+            initialIndex={initialIndex.value}
+            urlList={attrs["file-list"] ? attrs["file-list"].map((file: UploadFile) => file.url) : []}
+            onClose={hideViewer}
+          ></ElImageViewer>
+        ) : (
+          <span></span>
+        )}
+      </span>
+    );
   },
 });
