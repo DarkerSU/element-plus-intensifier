@@ -6,18 +6,88 @@ element-plus-intensifier 是一款基于 element-plus 的组件增强器，旨�
 
 ### 安装
 
-```
-# npm 安装
-npm install element-plus-intensifier -D
+> 安装前提：增强是基于element-plus开发，所以必须先安装element-plus
 
-# yarn 安装
-yarn add element-plus-intensifier
-```
+* **步骤 1：** 安装依赖
 
-### 使用
+  ```shell
+    # 选择一个你喜欢的包管理器
+
+    # NPM
+    $ npm install element-plus-intensifier--save
+
+    # Yarn
+    $ yarn add element-plus-intensifier
+
+    # pnpm
+    $ pnpm install element-plus-intensifier
+  ```
+* **步骤 2：** 引入依赖
+  全局注册
+
+  ```ts
+  import App from './App.vue'
+
+  import ElementPlus from 'element-plus'
+  import 'element-plus/dist/index.css'
+
+  import { FormGenerator, TableGenerator,IUpload } from 'element-plus-intensifier'
+
+  const app = createApp(App)
+
+  app.component('FormGenerator', FormGenerator);
+  app.component('TableGenerator', TableGenerator);
+  app.component('IUpload',IUpload)
+
+  app.use(ElementPlus).mount('#app')
+  ```
+
+### 目前支持
+
+#### 上传组件增强器 IUpload
+
+按需引入
 
 ```ts
 import { IUpload } from 'element-plus-intensifier'
+```
 
-Vue.use(IUpload)
+使用案例
+
+```ts
+   <IUpload 
+      action="http://****/uploadFile" list-type="picture-card" 
+      :multiple="true"
+      :maxSize="90" 
+      :file-list="fileList" 
+      accept="image/*" 
+      :on-success="Success">
+      <el-button type="primary">点我上传</el-button>
+   <IUpload>
+```
+
+#### 表单增强器 FormGenerator
+
+按需引入
+
+```ts
+import { FormGenerator } from 'element-plus-intensifier';
+// 使用
+<template>
+  <FormGenerator :model="form" :formOption="formOption" />
+</template>
+
+```
+
+#### 表格增强器 TableGenerator
+
+按需引入
+
+```ts
+import { TableGenerator } from 'element-plus-intensifier';
+
+// 使用
+<template>
+  <TableGenerator :data="tableData":tableOption="tableOption" />
+</template>
 ```

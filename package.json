@@ -1,6 +1,6 @@
 {
   "name": "element-plus-intensifier",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "./dist/index.js",
   "repository": "https://github.com/DarkerSU/element-plus-intensifier.git",
   "author": "darkersu",
@@ -24,5 +24,8 @@
     "path": "^0.12.7",
     "vite": "^4.1.4",
     "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0"
   }
 }
