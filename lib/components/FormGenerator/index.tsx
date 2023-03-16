@@ -4,7 +4,7 @@ import { Search, Refresh, ArrowUp, } from '@element-plus/icons-vue'
 import { defineComponent, ref } from 'vue'
 import type { Ref } from 'vue'
 import type { formAttrs, RefFormGeneratorObj, RefFormGenerator, formOption } from './type.d'
-
+import './index.scss'
 export default defineComponent({
   name: 'FormGenerator',
   setup(props, { expose, attrs, slots, emit }) {

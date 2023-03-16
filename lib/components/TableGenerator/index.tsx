@@ -1,7 +1,7 @@
 import { ElTable, ElTableColumn, ElEmpty, ElLoading } from 'element-plus'
 import { onMounted, ref, watch, defineComponent, nextTick } from 'vue';
 import type { tableAttrs, tableOption } from './type.d'
-
+import './index.scss'
 export default defineComponent({
   name: 'TableGenerator',
   setup(props, { expose, attrs, slots, emit }) {

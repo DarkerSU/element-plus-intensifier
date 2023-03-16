@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import VuePluginJsx from '@vitejs/plugin-vue-jsx'
-
+import VitePluginStyleInject from 'vite-plugin-style-inject'
 export default defineConfig({
     build: {
         lib: {
@@ -22,5 +22,5 @@ export default defineConfig({
             },
         },
     },
-    plugins: [Vue(), VuePluginJsx()]
+    plugins: [Vue(), VuePluginJsx(), VitePluginStyleInject()]
 })

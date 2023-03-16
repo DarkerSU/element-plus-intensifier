@@ -1,16 +1,28 @@
-import { defineComponent, ref, computed, watch } from "vue";
+import { defineComponent, ref, onMounted, computed, watch, Fragment, getCurrentInstance, nextTick } from "vue";
 import { UploadProps, UploadFile, UploadRawFile, FormInstance, ElUpload, ElImageViewer, ElMessage } from "element-plus";
-
+import './index.scss'
+// import 
 export default defineComponent({
   name: "IUpload",
-  setup(props, { attrs, emit, slots }) {
+  setup(props, { attrs, emit, slots, }) {
     const showViewer = ref<boolean>(false);
     const initialIndex = ref<number>(0);
+    const currentRef = ref<HTMLElement>()
+
+    onMounted(() => {
+      if (attrs["list-type"] !== "picture-card") {
+        const { proxy } = getCurrentInstance();
+        let dom = proxy?.$el.nextSibling.getElementsByClassName('el-upload-list')[0];
+        if (dom) {
+          dom.style.height = `${attrs['maxShowListHeight'] ? attrs['maxShowListHeight'] : 100}px`;
+        }
+      }
+    });
 
     const hideViewer = () => {
       showViewer.value = false;
     };
-
+    
     const handlePreview: UploadProps["onPreview"] = (uploadFile: UploadFile) => {
       const index = attrs["file-list"] ? attrs["file-list"].findIndex((file: UploadFile) => file.uid === uploadFile.uid) : 0;
       initialIndex.value = index > -1 ? index : 0;  // Current active Iamge index
@@ -29,9 +41,10 @@ export default defineComponent({
         emit("before-upload", rawFile);
       }
     };
+
     return () => (
-      <span>
-        <ElUpload {...attrs}
+      <Fragment>
+        <ElUpload class={'skyd-upload'} {...attrs} ref={currentRef}
           onPreview={handlePreview}
           beforeUpload={beforeUpload}
           v-slots={{
@@ -39,16 +52,18 @@ export default defineComponent({
           }}
         ></ElUpload>
 
-        {(attrs["list-type"] === "picture-card" || attrs["list-type"] === "picture") && showViewer.value ? (
-          <ElImageViewer
-            initialIndex={initialIndex.value}
-            urlList={attrs["file-list"] ? attrs["file-list"].map((file: UploadFile) => file.url) : []}
-            onClose={hideViewer}
-          ></ElImageViewer>
-        ) : (
-          <span></span>
-        )}
-      </span>
+        {
+          (attrs["list-type"] === "picture-card" || attrs["list-type"] === "picture") && showViewer.value ? (
+            <ElImageViewer
+              initialIndex={initialIndex.value}
+              urlList={attrs["file-list"] ? attrs["file-list"].map((file: UploadFile) => file.url) : []}
+              onClose={hideViewer}
+            ></ElImageViewer>
+          ) : (
+            <span></span>
+          )
+        }
+      </Fragment>
     );
   },
 });
