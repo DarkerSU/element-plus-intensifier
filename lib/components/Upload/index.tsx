@@ -14,7 +14,7 @@ export default defineComponent({
         const { proxy } = getCurrentInstance();
         let dom = proxy?.$el.nextSibling.getElementsByClassName('el-upload-list')[0];
         if (dom) {
-          dom.style.height = `${attrs['maxShowListHeight'] ? attrs['maxShowListHeight'] : 100}px`;
+          dom.style.height = `${attrs['max-show-height'] ? attrs['max-show-height'] : 100}px`;
         }
       }
     });
@@ -32,9 +32,9 @@ export default defineComponent({
 
     //上传钩子
     const beforeUpload = (rawFile: UploadRawFile) => {
-      if (attrs["maxSize"]) {
-        if (rawFile.size / 1024 > attrs["maxSize"]) {
-          ElMessage.warning(`上传文件大小不能超过 ${attrs["maxSize"]}KB`);
+      if (attrs["max-size"]) {
+        if (rawFile.size / 1024 > attrs["max-size"]) {
+          ElMessage.warning(`上传文件大小不能超过 ${attrs["max-size"]}KB`);
           return false;
         }
       } else {
