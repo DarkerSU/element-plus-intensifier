@@ -5,7 +5,3 @@ import TableGenerator from './components/TableGenerator'
 export {
     IUpload, FormGenerator, TableGenerator
 }
-
-export default {
-    IUpload, FormGenerator, TableGenerator
-}
