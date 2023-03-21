@@ -1,6 +1,6 @@
-(function(){ try {var elementStyle = document.createElement('style'); elementStyle.appendChild(document.createTextNode(".skyd-upload .el-upload-list{overflow-y:auto;border-radius:3px}.skyd-upload .el-upload-list::-webkit-scrollbar{width:8px}.skyd-upload .el-upload-list::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:inset 0 0 5px #0003;background:rgba(139,139,139,.2)}.skyd-upload .el-upload-list::-webkit-scrollbar-track{box-shadow:inset 0 0 5px #0003;border-radius:0;background:rgba(106,106,106,.1)}.FormGenerator.FormGeneratorSearch{display:flex;justify-content:flex-start;align-items:flex-start;flex-wrap:wrap;flex-direction:row;gap:15px 10px}.FormGenerator.FormGeneratorSearch.el-form--inline .el-form-item{width:calc(25% - 8px);margin:0}.FormGenerator.FormGeneratorSearch.el-form--inline .el-form-item.btnItem{margin:0}.FormGenerator.FormGeneratorSearch.el-form--inline .el-form-item.btnItem .el-form-item__label-wrap{display:none}.FormGenerator.FormGeneratorSearch.el-form--inline .el-form-item.btnItem .el-form-item__content{flex-wrap:nowrap}.FormGenerator.FormGeneratorDialog.el-form--default:not(.el-form--inline){padding-bottom:45px}.FormGenerator.FormGeneratorDialog.el-form--default:not(.el-form--inline) .btnItem{margin:0;height:64px;position:absolute;bottom:0;right:0;width:100%;box-shadow:1px 2px 10px #9ab7ff80;z-index:1;z-index:11;padding:0 16px;box-sizing:border-box}.FormGenerator.FormGeneratorDialog.el-form--default:not(.el-form--inline) .btnItem .el-form-item__content{display:flex;justify-content:flex-end;align-items:center;flex-wrap:nowrap}.FormGenerator.FormGeneratorDialog.el-form--default:not(.el-form--inline) .el-form-item__content>div{width:100%}.FormGenerator .searchItem{flex-grow:1;flex-shrink:0}.FormGenerator .searchItem .el-form-item__content{justify-content:flex-end}.FormGenerator .expandBtn i{transition:all .3s}.FormGenerator .expandBtn.down i{transform:rotate(180deg)}.FormGenerator .el-select,.FormGenerator .el-input,.FormGenerator .el-cascader,.FormGenerator .el-date-editor.el-input,.FormGenerator .el-date-editor.el-input__wrapper,.TableGenerator .el-scrollbar__view{width:100%}")); document.head.appendChild(elementStyle);} catch(e) {console.error('vite-plugin-css-injected-by-js', e);} })();import { defineComponent as S, ref as C, onMounted as J, getCurrentInstance as Q, createVNode as a, Fragment as p, mergeProps as t, openBlock as T, createElementBlock as B, createElementVNode as F, createTextVNode as Y, isVNode as X, watch as R, nextTick as L } from "vue";
-import { ElUpload as K, ElImageViewer as Z, ElMessage as i, ElForm as o, ElFormItem as j, ElButton as m, ElSwitch as O, ElTimePicker as ee, ElDatePicker as le, ElCheckboxGroup as W, ElCheckboxButton as ae, ElCheckbox as ue, ElRadioGroup as q, ElRadioButton as re, ElRadio as de, ElCascader as ce, ElTreeSelect as te, ElSelect as he, ElOption as ne, ElInputNumber as se, ElInput as ve, ElLoading as we, ElTable as H, ElTableColumn as M, ElEmpty as be } from "element-plus";
-const ze = /* @__PURE__ */ S({
+(function(){ try {var elementStyle = document.createElement('style'); elementStyle.appendChild(document.createTextNode(".skyd-upload .el-upload-list{overflow-y:auto;border-radius:3px}.skyd-upload .el-upload-list::-webkit-scrollbar{width:8px}.skyd-upload .el-upload-list::-webkit-scrollbar-thumb{border-radius:10px;box-shadow:inset 0 0 5px #0003;background:rgba(139,139,139,.2)}.skyd-upload .el-upload-list::-webkit-scrollbar-track{box-shadow:inset 0 0 5px #0003;border-radius:0;background:rgba(106,106,106,.1)}.FormGenerator.FormGeneratorSearch{display:flex;justify-content:flex-start;align-items:flex-start;flex-wrap:wrap;flex-direction:row;gap:15px 10px}.FormGenerator.FormGeneratorSearch.el-form--inline .el-form-item{width:calc(25% - 8px);margin:0}.FormGenerator.FormGeneratorSearch.el-form--inline .el-form-item.btnItem{margin:0}.FormGenerator.FormGeneratorSearch.el-form--inline .el-form-item.btnItem .el-form-item__label-wrap{display:none}.FormGenerator.FormGeneratorSearch.el-form--inline .el-form-item.btnItem .el-form-item__content{flex-wrap:nowrap}.FormGenerator.FormGeneratorDialog.el-form--default:not(.el-form--inline){padding-bottom:45px}.FormGenerator.FormGeneratorDialog.el-form--default:not(.el-form--inline) .btnItem{margin:0;height:64px;position:absolute;bottom:0;right:0;width:100%;box-shadow:1px 2px 10px #9ab7ff80;z-index:1;z-index:11;padding:0 16px;box-sizing:border-box}.FormGenerator.FormGeneratorDialog.el-form--default:not(.el-form--inline) .btnItem .el-form-item__content{display:flex;justify-content:flex-end;align-items:center;flex-wrap:nowrap}.FormGenerator.FormGeneratorDialog.el-form--default:not(.el-form--inline) .el-form-item__content>div{width:100%}.FormGenerator .searchItem{flex-grow:1;flex-shrink:0}.FormGenerator .searchItem .el-form-item__content{justify-content:flex-end}.FormGenerator .expandBtn i{transition:all .3s}.FormGenerator .expandBtn.down i{transform:rotate(180deg)}.FormGenerator .el-select,.FormGenerator .el-input,.FormGenerator .el-cascader,.FormGenerator .el-date-editor.el-input,.FormGenerator .el-date-editor.el-input__wrapper,.TableGenerator .el-scrollbar__view{width:100%}")); document.head.appendChild(elementStyle);} catch(e) {console.error('vite-plugin-css-injected-by-js', e);} })();import { defineComponent as M, ref as C, onMounted as J, getCurrentInstance as Q, createVNode as a, Fragment as p, mergeProps as h, openBlock as T, createElementBlock as B, createElementVNode as F, createTextVNode as Y, isVNode as X, watch as R, nextTick as L } from "vue";
+import { ElUpload as K, ElImageViewer as Z, ElMessage as i, ElForm as o, ElFormItem as j, ElButton as U, ElSwitch as O, ElTimePicker as ee, ElDatePicker as le, ElCheckboxGroup as W, ElCheckboxButton as ae, ElCheckbox as ue, ElRadioGroup as q, ElRadioButton as re, ElRadio as de, ElCascader as ce, ElTreeSelect as he, ElSelect as te, ElOption as ne, ElInputNumber as se, ElInput as ve, ElLoading as we, ElTable as H, ElTableColumn as S, ElEmpty as be } from "element-plus";
+const ze = /* @__PURE__ */ M({
   name: "IUpload",
   setup(x, {
     attrs: n,
@@ -11,25 +11,25 @@ const ze = /* @__PURE__ */ S({
     J(() => {
       if (n["list-type"] !== "picture-card") {
         const {
-          proxy: h
+          proxy: t
         } = Q();
-        let v = h == null ? void 0 : h.$el.nextSibling.getElementsByClassName("el-upload-list")[0];
-        v && (v.style.height = `${n["max-show-height"] ? n["max-show-height"] : 100}px`);
+        let v = t == null ? void 0 : t.$el.nextSibling.getElementsByClassName("el-upload-list")[0];
+        v && (v.style.height = `${n["max-show-height"] ? n["max-show-height"] : 100}px`, v.style.boxShadow = `${n["max-show-height"] ? "0 0 13px #ddd inset" : "none"}`);
       }
     });
     const s = () => {
       y.value = !1;
-    }, g = (h) => {
-      const v = n["file-list"] ? n["file-list"].findIndex((b) => b.uid === h.uid) : 0;
-      l.value = v > -1 ? v : 0, y.value = !0, w("on-preview", h);
-    }, k = (h) => {
+    }, g = (t) => {
+      const v = n["file-list"] ? n["file-list"].findIndex((b) => b.uid === t.uid) : 0;
+      l.value = v > -1 ? v : 0, y.value = !0, w("on-preview", t);
+    }, k = (t) => {
       if (n["max-size"]) {
-        if (h.size / 1024 > n["max-size"])
+        if (t.size / 1024 > n["max-size"])
           return i.warning(`上传文件大小不能超过 ${n["max-size"]}KB`), !1;
       } else
-        w("before-upload", h);
+        w("before-upload", t);
     };
-    return () => a(p, null, [a(K, t({
+    return () => a(p, null, [a(K, h({
       class: "skyd-upload"
     }, n, {
       ref: E,
@@ -39,7 +39,7 @@ const ze = /* @__PURE__ */ S({
       ...u
     }), (n["list-type"] === "picture-card" || n["list-type"] === "picture") && y.value ? a(Z, {
       initialIndex: l.value,
-      urlList: n["file-list"] ? n["file-list"].map((h) => h.url) : [],
+      urlList: n["file-list"] ? n["file-list"].map((t) => t.url) : [],
       onClose: s
     }, null) : a("span", null, null)]);
   }
@@ -90,7 +90,7 @@ var $e = /* @__PURE__ */ G(_e, [["render", Ee], ["__file", "arrow-up.vue"]]), pe
 function Ie(x, n, w, u, y, l) {
   return T(), B("svg", Ve, Ce);
 }
-var Ue = /* @__PURE__ */ G(pe, [["render", Ie], ["__file", "refresh.vue"]]), me = {
+var me = /* @__PURE__ */ G(pe, [["render", Ie], ["__file", "refresh.vue"]]), Ue = {
   name: "Search"
 }, De = {
   xmlns: "http://www.w3.org/2000/svg",
@@ -104,17 +104,17 @@ var Ue = /* @__PURE__ */ G(pe, [["render", Ie], ["__file", "refresh.vue"]]), me 
   null,
   -1
   /* HOISTED */
-), Me = [
+), Se = [
   Ye
 ];
-function Se(x, n, w, u, y, l) {
-  return T(), B("svg", De, Me);
+function Me(x, n, w, u, y, l) {
+  return T(), B("svg", De, Se);
 }
-var Te = /* @__PURE__ */ G(me, [["render", Se], ["__file", "search.vue"]]);
+var Te = /* @__PURE__ */ G(Ue, [["render", Me], ["__file", "search.vue"]]);
 function Be(x) {
   return typeof x == "function" || Object.prototype.toString.call(x) === "[object Object]" && !X(x);
 }
-const Ae = /* @__PURE__ */ S({
+const Ae = /* @__PURE__ */ M({
   name: "FormGenerator",
   setup(x, {
     expose: n,
@@ -122,7 +122,7 @@ const Ae = /* @__PURE__ */ S({
     slots: u,
     emit: y
   }) {
-    const l = w, E = C(), s = {}, g = C(!1), k = isNaN(l.column) ? 4 : l.column >= 4 ? l.column : 4, h = {
+    const l = w, E = C(), s = {}, g = C(!1), k = isNaN(l.column) ? 4 : l.column >= 4 ? l.column : 4, t = {
       submit: () => {
         E.value.validate((b) => {
           b && y("submit");
@@ -139,14 +139,14 @@ const Ae = /* @__PURE__ */ S({
     }
     return l.formOption.length >= k - 2 && (l == null ? void 0 : l.type) === "search" && v(!1), n(() => ({
       ...E.value,
-      ...h,
+      ...t,
       $refs: s
     })), () => {
       function b() {
         let e = {
           ...l
         };
-        return delete e.model, delete e.formOption, a(o, t({
+        return delete e.model, delete e.formOption, a(o, h({
           class: `FormGenerator ${(l == null ? void 0 : l.type) === "search" ? "FormGeneratorSearch" : ""} ${(l == null ? void 0 : l.type) === "dialog" ? "FormGeneratorDialog" : ""}`,
           inline: (l == null ? void 0 : l.type) === "search",
           "validate-on-rule-change": !1,
@@ -157,7 +157,7 @@ const Ae = /* @__PURE__ */ S({
           default: () => [l.formOption.map((_) => {
             let V;
             if (!(_.hasOwnProperty("show") && _.show === !1))
-              return a(j, t(_.formItem, {
+              return a(j, h(_.formItem, {
                 key: _.formItem.prop
               }), Be(V = $(_)) ? V : {
                 default: () => [V]
@@ -165,19 +165,19 @@ const Ae = /* @__PURE__ */ S({
           }), e.disabled === !0 || e.noFooter || !e.onSubmit ? "" : a(j, {
             class: `btnItem ${g.value ? "searchItem" : ""}`
           }, {
-            default: () => u != null && u.default ? a(p, null, [u.default()[0].children]) : (l == null ? void 0 : l.type) === "search" ? c() : a(p, null, [(l == null ? void 0 : l.type) === "dialog" ? a(m, {
+            default: () => u != null && u.default ? a(p, null, [u.default()[0].children]) : (l == null ? void 0 : l.type) === "search" ? c() : a(p, null, [(l == null ? void 0 : l.type) === "dialog" ? a(U, {
               onClick: (_) => {
                 var I, D;
-                function V(U) {
-                  return U.parentElement.classList.value.split(" ").includes("el-dialog") ? U.parentElement : V(U.parentElement);
+                function V(m) {
+                  return m.parentElement.classList.value.split(" ").includes("el-dialog") ? m.parentElement : V(m.parentElement);
                 }
                 (D = (I = V(_.target).querySelector(".el-dialog__headerbtn")) == null ? void 0 : I.click) == null || D.call(I);
               }
             }, {
               default: () => [Y("取消")]
-            }) : "", a(m, {
+            }) : "", a(U, {
               type: "primary",
-              onClick: h.submit
+              onClick: t.submit
             }, {
               default: () => [Y("确定")]
             })]),
@@ -186,10 +186,10 @@ const Ae = /* @__PURE__ */ S({
         });
       }
       function $(e) {
-        var _, V, I, D, U, f, z, A, N;
+        var _, V, I, D, m, f, z, A, N;
         switch (s[e.formItem.prop] = C(), e.type) {
           case "input":
-            return a(ve, t({
+            return a(ve, h({
               ref: s[e.formItem.prop],
               clearable: !0,
               maxlength: 30
@@ -200,7 +200,7 @@ const Ae = /* @__PURE__ */ S({
               ...(_ = e == null ? void 0 : e.control) == null ? void 0 : _.slot
             });
           case "input-number":
-            return a(se, t({
+            return a(se, h({
               ref: s[e.formItem.prop],
               min: 0,
               max: 100
@@ -209,7 +209,7 @@ const Ae = /* @__PURE__ */ S({
               "onUpdate:modelValue": (r) => l.model[e.formItem.prop] = r
             }), null);
           case "select":
-            return a(he, t({
+            return a(te, h({
               ref: s[e.formItem.prop],
               clearable: !0
             }, e == null ? void 0 : e.control, {
@@ -218,7 +218,7 @@ const Ae = /* @__PURE__ */ S({
             }), {
               default: () => {
                 var r;
-                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(ne, t(d, {
+                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(ne, h(d, {
                   key: d.value
                 }), {
                   ...d == null ? void 0 : d.slot
@@ -226,7 +226,7 @@ const Ae = /* @__PURE__ */ S({
               }
             });
           case "tree-select":
-            return a(te, t({
+            return a(he, h({
               ref: s[e.formItem.prop],
               clearable: !0
             }, e == null ? void 0 : e.control, {
@@ -236,7 +236,7 @@ const Ae = /* @__PURE__ */ S({
               ...(V = e == null ? void 0 : e.control) == null ? void 0 : V.slot
             });
           case "cascader":
-            return a(ce, t({
+            return a(ce, h({
               ref: s[e.formItem.prop]
             }, e == null ? void 0 : e.control, {
               modelValue: l.model[e.formItem.prop],
@@ -245,7 +245,7 @@ const Ae = /* @__PURE__ */ S({
               ...(I = e == null ? void 0 : e.control) == null ? void 0 : I.slot
             });
           case "radio":
-            return a(q, t({
+            return a(q, h({
               ref: s[e.formItem.prop]
             }, e == null ? void 0 : e.control, {
               modelValue: l.model[e.formItem.prop],
@@ -253,7 +253,7 @@ const Ae = /* @__PURE__ */ S({
             }), {
               default: () => {
                 var r;
-                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(de, t(d, {
+                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(de, h(d, {
                   label: d.value,
                   key: d.label
                 }), {
@@ -263,7 +263,7 @@ const Ae = /* @__PURE__ */ S({
               }
             });
           case "radio-button":
-            return a(q, t({
+            return a(q, h({
               ref: s[e.formItem.prop]
             }, e == null ? void 0 : e.control, {
               modelValue: l.model[e.formItem.prop],
@@ -271,7 +271,7 @@ const Ae = /* @__PURE__ */ S({
             }), {
               default: () => {
                 var r;
-                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(re, t(d, {
+                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(re, h(d, {
                   label: d.value,
                   key: d.label
                 }), {
@@ -281,7 +281,7 @@ const Ae = /* @__PURE__ */ S({
               }
             });
           case "checkbox":
-            return a(W, t({
+            return a(W, h({
               ref: s[e.formItem.prop]
             }, e == null ? void 0 : e.control, {
               modelValue: l.model[e.formItem.prop],
@@ -289,7 +289,7 @@ const Ae = /* @__PURE__ */ S({
             }), {
               default: () => {
                 var r;
-                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(ue, t(d, {
+                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(ue, h(d, {
                   label: d.value,
                   key: d.label
                 }), {
@@ -299,7 +299,7 @@ const Ae = /* @__PURE__ */ S({
               }
             });
           case "checkbox-button":
-            return a(W, t({
+            return a(W, h({
               ref: s[e.formItem.prop]
             }, e == null ? void 0 : e.control, {
               modelValue: l.model[e.formItem.prop],
@@ -307,7 +307,7 @@ const Ae = /* @__PURE__ */ S({
             }), {
               default: () => {
                 var r;
-                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(ae, t(d, {
+                return [(r = e == null ? void 0 : e.control) == null ? void 0 : r.option.map((d) => a(ae, h(d, {
                   label: d.value,
                   key: d.label
                 }), {
@@ -323,7 +323,7 @@ const Ae = /* @__PURE__ */ S({
               datetime: "YYYY-MM-DD hh:mm:ss",
               date: "YYYY-MM-DD"
             }[((D = e == null ? void 0 : e.control) == null ? void 0 : D.type) || "date"];
-            return a(le, t({
+            return a(le, h({
               ref: s[e.formItem.prop],
               clearable: !0,
               format: P,
@@ -332,10 +332,10 @@ const Ae = /* @__PURE__ */ S({
               modelValue: l.model[e.formItem.prop],
               "onUpdate:modelValue": (r) => l.model[e.formItem.prop] = r
             }), {
-              ...(U = e == null ? void 0 : e.control) == null ? void 0 : U.slot
+              ...(m = e == null ? void 0 : e.control) == null ? void 0 : m.slot
             });
           case "time":
-            return a(ee, t({
+            return a(ee, h({
               ref: s[e.formItem.prop],
               clearable: !0
             }, e == null ? void 0 : e.control, {
@@ -345,7 +345,7 @@ const Ae = /* @__PURE__ */ S({
               ...(f = e == null ? void 0 : e.control) == null ? void 0 : f.slot
             });
           case "switch":
-            return a(O, t({
+            return a(O, h({
               ref: s[e.formItem.prop]
             }, e == null ? void 0 : e.control, {
               modelValue: l.model[e.formItem.prop],
@@ -354,13 +354,13 @@ const Ae = /* @__PURE__ */ S({
               ...(z = e == null ? void 0 : e.control) == null ? void 0 : z.slot
             });
           case "upload":
-            return a(K, t({
+            return a(K, h({
               ref: s[e.formItem.prop]
             }, e == null ? void 0 : e.control, {
               "file-list": l.model[e.formItem.prop],
               "onUpdate:file-list": (r) => l.model[e.formItem.prop] = r
             }), {
-              default: () => l.disabled ? "" : a(m, {
+              default: () => l.disabled ? "" : a(U, {
                 type: "primary"
               }, {
                 default: () => [Y("上传文件")]
@@ -377,18 +377,18 @@ const Ae = /* @__PURE__ */ S({
         }
       }
       function c() {
-        return a(p, null, [a(m, {
+        return a(p, null, [a(U, {
           type: "primary",
-          onClick: h.submit,
+          onClick: t.submit,
           icon: Te
         }, {
           default: () => [Y("搜索")]
-        }), a(m, {
-          onClick: h.reset,
-          icon: Ue
+        }), a(U, {
+          onClick: t.reset,
+          icon: me
         }, {
           default: () => [Y("重置")]
-        }), l.type === "search" && l.formOption.length > k - 1 ? a(p, null, [a(m, {
+        }), l.type === "search" && l.formOption.length > k - 1 ? a(p, null, [a(U, {
           text: !0,
           type: "primary",
           class: `expandBtn ${g.value ? "up" : "down"}`,
@@ -404,7 +404,7 @@ const Ae = /* @__PURE__ */ S({
     };
   }
 });
-const Ne = /* @__PURE__ */ S({
+const Ne = /* @__PURE__ */ M({
   name: "TableGenerator",
   setup(x, {
     expose: n,
@@ -414,16 +414,16 @@ const Ne = /* @__PURE__ */ S({
   }) {
     const l = w;
     let E, s = new Date().getTime(), g = C(!1), k = C(0);
-    return R(() => l.loading, (h) => {
-      h ? L(() => {
+    return R(() => l.loading, (t) => {
+      t ? L(() => {
         E = we.service({
           target: `.el-table-${s}`
         });
       }) : E == null || E.close();
     }, {
       immediate: !0
-    }), R(() => l.data, (h) => {
-      if (!(u != null && u.operation) || h.length === 0)
+    }), R(() => l.data, (t) => {
+      if (!(u != null && u.operation) || t.length === 0)
         return g.value = !0;
       g.value = !1, L(() => {
         let v = 0;
@@ -434,18 +434,18 @@ const Ne = /* @__PURE__ */ S({
     }, {
       immediate: !0
     }), () => {
-      function h($) {
-        return $.map((c) => ["selection", "index", "expand"].includes(c.type) ? a(M, t({
+      function t($) {
+        return $.map((c) => ["selection", "index", "expand"].includes(c.type) ? a(S, h({
           type: c.type
         }, c), {
           ...c == null ? void 0 : c.slot
-        }) : a(M, t({
+        }) : a(S, h({
           "show-overflow-tooltip": !0,
           align: "left"
         }, c), {
           default: (e) => {
             var _;
-            return c.children && Array.isArray(c.children) && c.children.length > 0 ? h(c.children) : u[c.prop] ? a(p, null, [(_ = u[c.prop]) == null ? void 0 : _.call(u, {
+            return c.children && Array.isArray(c.children) && c.children.length > 0 ? t(c.children) : u[c.prop] ? a(p, null, [(_ = u[c.prop]) == null ? void 0 : _.call(u, {
               $index: e.$index,
               row: e.row
             })]) : c.formatter ? a(p, null, [c.formatter({
@@ -457,12 +457,12 @@ const Ne = /* @__PURE__ */ S({
         }));
       }
       function v() {
-        return a(H, t({
+        return a(H, h({
           stripe: !0
         }, l, {
           class: `TableGenerator el-table-${s}`
         }), {
-          default: () => [h(l.tableOption), u != null && u.operation ? a(M, {
+          default: () => [t(l.tableOption), u != null && u.operation ? a(S, {
             fixed: "right",
             label: "操作",
             width: k.value
@@ -484,10 +484,10 @@ const Ne = /* @__PURE__ */ S({
         });
       }
       function b() {
-        return a(H, t(w, {
+        return a(H, h(w, {
           class: `TableGenerator el-table-${s}`
         }), {
-          default: () => [a(M, {
+          default: () => [a(S, {
             fixed: "right"
           }, {
             default: ($) => {

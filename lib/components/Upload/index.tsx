@@ -14,7 +14,8 @@ export default defineComponent({
         const { proxy } = getCurrentInstance();
         let dom = proxy?.$el.nextSibling.getElementsByClassName('el-upload-list')[0];
         if (dom) {
-          dom.style.height = `${attrs['max-show-height'] ? attrs['max-show-height'] : 100}px`;
+          dom.style.height = `${attrs['max-show-height'] ? attrs['max-show-height'] + 'px' : 'auto'}`;
+          dom.style.boxShadow = `${attrs['max-show-height'] ? '0 0 13px #ddd inset' : 'none'}`;
         }
       }
     });
@@ -22,7 +23,7 @@ export default defineComponent({
     const hideViewer = () => {
       showViewer.value = false;
     };
-    
+
     const handlePreview: UploadProps["onPreview"] = (uploadFile: UploadFile) => {
       const index = attrs["file-list"] ? attrs["file-list"].findIndex((file: UploadFile) => file.uid === uploadFile.uid) : 0;
       initialIndex.value = index > -1 ? index : 0;  // Current active Iamge index

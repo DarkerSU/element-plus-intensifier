@@ -1,6 +1,6 @@
 {
   "name": "element-plus-intensifier",
-  "version": "1.0.13",
+  "version": "1.0.15",
   "main": "./dist/index.js",
   "repository": "https://github.com/DarkerSU/element-plus-intensifier.git",
   "author": "darkersu",
@@ -11,7 +11,9 @@
     "intensifier"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "docs:dev":"vitepress dev docs",
+    "docs:build":"vitepress build docs"
   },
   "peerDependencies": {
     "element-plus": ">=2.2.0",
