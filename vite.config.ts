@@ -1,8 +1,10 @@
 // import path from 'path'
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
-import VuePluginJsx from '@vitejs/plugin-vue-jsx'
-import VitePluginStyleInject from 'vite-plugin-style-inject'
+import VueJsx from '@vitejs/plugin-vue-jsx'
+// import ViteDts from 'vite-plugin-dts'
+// import ViteStyleInject from 'vite-plugin-style-inject'
+
 export default defineConfig({
     build: {
         lib: {
@@ -12,6 +14,7 @@ export default defineConfig({
             // "commonjs" | "esm" | "module" | "systemjs"
             fileName: (format, entryName) => `${entryName}.js`,
         },
+        sourcemap:true,
         rollupOptions: {
             external: ['vue', 'element-plus'],
             output: {
@@ -22,5 +25,5 @@ export default defineConfig({
             },
         },
     },
-    plugins: [Vue(), VuePluginJsx(), VitePluginStyleInject()]
+    plugins: [Vue(), VueJsx(),]
 })

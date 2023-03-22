@@ -3,8 +3,8 @@ import type { FormInstance } from 'element-plus'
 import { Search, Refresh, ArrowUp, } from '@element-plus/icons-vue'
 import { defineComponent, ref } from 'vue'
 import type { Ref } from 'vue'
-import type { formAttrs, RefFormGeneratorObj, RefFormGenerator, formOption } from './type.d'
-import './index.scss'
+import type { formAttrs, RefFormGeneratorObj, formOption } from '../typing/type'
+
 export default defineComponent({
   name: 'FormGenerator',
   setup(props, { expose, attrs, slots, emit }) {

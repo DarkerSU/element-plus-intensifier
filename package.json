@@ -1,35 +1,42 @@
 {
   "name": "element-plus-intensifier",
-  "version": "1.0.16",
+  "version": "1.0.20",
+  "description": "基于element-plus的组件增强器",
+  "type": "module",
   "main": "./dist/index.js",
   "repository": "https://github.com/DarkerSU/element-plus-intensifier.git",
   "author": "darkersu",
-  "license": "MIT",
+  "license": "ISC",
   "keywords": [
     "vue3",
     "element-plus",
-    "intensifier"
+    "intensifier",
+    "form",
+    "table",
+    "generator"
+  ],
+  "files": [
+    "dist/",
+    "README.md"
   ],
   "scripts": {
     "build": "vite build",
-    "docs:dev":"vitepress dev docs",
-    "docs:build":"vitepress build docs"
-  },
-  "peerDependencies": {
-    "element-plus": ">=2.2.0",
-    "vue": ">=3.0.0"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
-    "element-plus": "^2.3.0",
     "path": "^0.12.7",
     "sass": "^1.59.3",
-    "vite": "^4.1.4",
-    "vite-plugin-style-inject": "^0.0.1",
-    "vue": "^3.2.47"
+    "vite": "^4.1.2",
+    "vite-plugin-dts": "^2.0.0-beta.1",
+    "vite-plugin-style-inject": "^0.0.1"
   },
   "dependencies": {
-    "@element-plus/icons-vue": "^2.1.0"
+    "@element-plus/icons-vue": "^2.0.10",
+    "element-plus": "^2.2.30",
+    "typescript": "^4.9.5",
+    "vue": "^3.2.47"
   }
 }
