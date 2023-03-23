@@ -58,36 +58,10 @@ import { IUpload } from 'element-plus-intensifier'
    <IUpload 
       action="http://****/uploadFile" list-type="picture-card" 
       :multiple="true"
-      :maxSize="90" 
+      :max-size="90" 
       :file-list="fileList" 
       accept="image/*" 
       :on-success="Success">
       <el-button type="primary">点我上传</el-button>
    <IUpload>
-```
-
-#### 表单增强器 FormGenerator
-
-按需引入
-
-```ts
-import { FormGenerator } from 'element-plus-intensifier';
-// 使用
-<template>
-  <FormGenerator :model="form" :formOption="formOption" />
-</template>
-
-```
-
-#### 表格增强器 TableGenerator
-
-按需引入
-
-```ts
-import { TableGenerator } from 'element-plus-intensifier';
-
-// 使用
-<template>
-  <TableGenerator :data="tableData":tableOption="tableOption" />
-</template>
 ```
