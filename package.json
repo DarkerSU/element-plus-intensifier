@@ -13,7 +13,8 @@
     "intensifier",
     "form",
     "table",
-    "generator"
+    "generator",
+    "source"
   ],
   "files": [
     "dist/",
