@@ -1,6 +1,6 @@
 {
   "name": "element-plus-intensifier",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "基于element-plus的组件增强器",
   "type": "module",
   "main": "./dist/index.js",
